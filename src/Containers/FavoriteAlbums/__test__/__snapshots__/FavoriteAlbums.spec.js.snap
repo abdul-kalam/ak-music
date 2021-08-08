@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favorite Album page Should render list of favorite albums 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-bdnxRM dFzpyz"
+  >
+    <div>
+      Favorite album list rendered
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Favorite Album page Should show message when there is no favorite 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-bdnxRM dFzpyz"
+  >
+    <div
+      class="sc-dlnjwi dqequj"
+      type="info"
+    >
+      <p
+        class="sc-hKFxyN FlXof"
+      >
+        You don't have any favorite albums. 
+        <a
+          class="sc-gtsrHT bcwdCn"
+          href="#"
+        >
+          Click here to select favorite
+        </a>
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;

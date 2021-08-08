@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Album listing page component should render with list of albums 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-dlnjwi FNGXW"
+  >
+    <div
+      class="sc-hKFxyN dZTiSr"
+    >
+      <select>
+        <option
+          value="all"
+        >
+          All
+        </option>
+        <option
+          value="10"
+        >
+          Rock
+        </option>
+        <option
+          value="12"
+        >
+          Zazz
+        </option>
+      </select>
+    </div>
+    <div>
+      Filter rendered
+    </div>
+    <section
+      class="sc-gtsrHT hMxucw"
+    >
+      <ul
+        class="sc-bdnxRM gytOic"
+      >
+        <div>
+          Album List rendered
+        </div>
+        <div>
+          Album List rendered
+        </div>
+        <div>
+          Album List rendered
+        </div>
+      </ul>
+    </section>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Album listing page component should render with message info if albums not available 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-dlnjwi FNGXW"
+  >
+    <div
+      class="sc-hKFxyN dZTiSr"
+    >
+      <select>
+        <option
+          value="all"
+        >
+          All
+        </option>
+        <option
+          value="10"
+        >
+          Rock
+        </option>
+        <option
+          value="12"
+        >
+          Zazz
+        </option>
+      </select>
+    </div>
+    <div>
+      Filter rendered
+    </div>
+    <section
+      class="sc-gtsrHT hMxucw"
+    >
+      <div
+        class="sc-eCApnc cfSDGH"
+        type="info"
+      >
+        <p
+          class="sc-jSFjdj jYHEXi"
+        >
+          Albums not available for selected criteria. Try something else!
+        </p>
+      </div>
+    </section>
+  </section>
+</DocumentFragment>
+`;

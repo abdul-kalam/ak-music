@@ -1,0 +1,63 @@
+import React from 'react'
+import { rest } from 'msw'
+import { setupServer } from 'msw/node'
+import renderer from 'react-test-renderer';
+import { render, fireEvent, screen } from '../../../Modules/test-utils';
+import {AlbumList} from './../AlbumList';
+import {selectTittleList} from './../../../Store/Reducers/musicSlice'
+import {mockTopAlbum, titleListMock} from './../../../mocks';
+import { act } from 'react-dom/test-utils';
+import { Autocomplete } from '../../../Components/Autocomplete/Autocomplete';
+
+
+jest.mock("react-redux", () => ({
+    ...jest.requireActual("react-redux"),
+    useSelector: jest.fn()
+    .mockImplementationOnce( ()=>{
+  
+        return mockTopAlbum.feed.entry
+      
+    })
+
+  }));
+
+  jest.mock('./../../../Components/Album/Album', () => ({
+    Album: () => {
+      return <div>Album List rendered</div>;
+    }
+  }));
+
+
+
+jest.mock('../../../Components/Autocomplete/Autocomplete', () => ({
+    Autocomplete: () => {
+      return (
+        <select>
+            <option value='all'>All</option>
+            <option value='10'>Rock</option>
+            <option value='12'>Zazz</option>
+        </select>
+      );
+    }
+  }));
+
+  jest.mock('../../../Components/Filter/filter', () => ({
+    Filter: () => {
+      return <div>Filter rendered</div>
+    }
+  }));
+
+describe('Album component', () => {
+    test('check album snapshot', () => {
+      const tree = renderer.create(<AlbumList />).toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
+
+
+
+
+
+
+
