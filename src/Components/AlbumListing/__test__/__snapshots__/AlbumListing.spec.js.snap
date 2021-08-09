@@ -33,7 +33,7 @@ exports[`Album listing page component should render with list of albums 1`] = `
       class="sc-gtsrHT hMxucw"
     >
       <ul
-        class="sc-bdnxRM gytOic"
+        class="sc-bdnxRM cHtmfc"
       >
         <div>
           Album List rendered

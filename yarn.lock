@@ -8542,11 +8542,6 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
-loadash@^1.0.0:
-  version "1.0.0"
-  resolved "https://chegg.jfrog.io/chegg/api/npm/npm/loadash/-/loadash-1.0.0.tgz#b92e54d809f3c225f4f9a9cfbaeae5b56de1ca9f"
-  integrity sha1-uS5U2AnzwiX0+anPuurltW3hyp8=
-
 loader-fs-cache@^1.0.0, loader-fs-cache@^1.0.2:
   version "1.0.3"
   resolved "https://chegg.jfrog.io/chegg/api/npm/npm/loader-fs-cache/-/loader-fs-cache-1.0.3.tgz#f08657646d607078be2f0a032f8bd69dd6f277d9"

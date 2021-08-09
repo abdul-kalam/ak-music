@@ -23,7 +23,6 @@ import {
 const FAVORITE_ALBUMS = 'favorite-albums';
 
 export const Album = ({ album }) => {
-
   const [isFavorite, setIsFavorite] = useState(album.isFavorite || false);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -32,8 +31,18 @@ export const Album = ({ album }) => {
   const img = album['im:image'][2]['label'];
   const artist = album['im:artist'].label;
 
-  const handleOnClick = () =>
-    history.push(`/album/${title.toLowerCase().split(' ').join('-')}/${id}`);
+  const handleOnClick = () =>{
+    let find = '/';
+    let re = new RegExp(find, 'g');
+    history.push(
+      `/album/${title
+        .replace(re, '')
+        .toLowerCase()
+        .split(' ')
+        .join('-')}/${id}`
+    );
+  }
+  
 
   const handleFavorite = (e) => {
     e.stopPropagation();
@@ -54,7 +63,7 @@ export const Album = ({ album }) => {
   };
 
   return (
-    <AlbumContainer onClick={handleOnClick} data-testid='album'>
+    <AlbumContainer onClick={handleOnClick} data-testid="album">
       <AlbumItem>
         <AlbumImage>
           <AlbumCover alt={title} src={img} loading="lazy" />

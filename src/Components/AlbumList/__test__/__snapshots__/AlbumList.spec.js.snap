@@ -3,7 +3,7 @@
 exports[`Album List component component should render list of albums correctly 1`] = `
 <DocumentFragment>
   <ul
-    class="sc-bdnxRM gytOic"
+    class="sc-bdnxRM cHtmfc"
   >
     <li
       class="sc-gtsrHT iKIoUa"
