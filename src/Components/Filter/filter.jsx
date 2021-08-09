@@ -35,7 +35,6 @@ export const Filter = (props) => {
     setStartDate(start);
     setEndDate(end);
     if (start && end) {
-      console.log(start.format());
       dispatch(
         setDateRange({
           startDate: start.format(),

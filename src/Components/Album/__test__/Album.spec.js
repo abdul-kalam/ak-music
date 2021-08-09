@@ -40,14 +40,14 @@ describe('Album component', () => {
 
     const { asFragment } = render(<Album album={mockAlbum} />);
 
-    const favorite = screen.getByTitle('Favorite');
-    expect(favorite).toBeInTheDocument();
-    userEvent.click(favorite);
+    const favorite = screen.getAllByTitle('Favorite');
+    expect(favorite[0]).toBeInTheDocument();
+    userEvent.click(favorite[0]);
     const unfavorite = screen.getByTitle('UnFavorite');
     expect(unfavorite).toBeInTheDocument();
-    expect(favorite).not.toBeInTheDocument();
+    expect(favorite[0]).not.toBeInTheDocument();
     userEvent.click(unfavorite);
-    expect(screen.getByTitle('Favorite')).toBeInTheDocument();
+    expect(screen.getAllByTitle('Favorite')[0]).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 });
